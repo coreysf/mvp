@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../../../styles/styles.css" />
+</head>
+<body>
+  <div>
+    <h3>PASSPORT      Italian Republic</h3>
+    <table>
+      <tr>
+        <td><span class="fieldName">Type:</span> {{ p.type }}</td>
+        <td><span class="fieldName">Country Code:</span> {{ p.countryCode }}</td>
+        <td><span class="fieldName">Passport No.:</span> {{ p.passportNo }}</td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Surname (1):</span> {{ p.surnames }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Given Names (2):</span> {{ p.givenNames }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Nationality (3):</span> {{ p.nationality }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Date of Birth (4):</span> {{ p.dob }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Gender (5):</span> {{ p.gender }}</td>
+        <td><span class="fieldName">Place of Birth (6):</span> {{ p.placeOfBirth }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Date of Issue (7):</span> {{ p.issueDate }}</td>
+        <td><span class="fieldName">Authority (9):</span> {{ p.authority }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Date of Expiration (8):</span> {{ p.expirationDate }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>{{ p.footer1 }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>{{ p.footer2 }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
