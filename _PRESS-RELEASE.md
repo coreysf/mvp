@@ -18,27 +18,36 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  "Template Translation"
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  "A streamlined, low-cost translation service for form documents"
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  "The template translation app reduces the cost of translation of template-based documents by leveraging prior translations. Templates are searchable by country and by document type."
 
 ## Problem ##
   > Describe the problem your product solves.
+   "Current translation technologies seek to reduce the cost of translation by leveraging prior work. However, they only work with text-based documents (e.g., MS Word and Adobe InDesign). Thus, such technologies fail to work with business and personal documents that are repetitive in nature but image-based (e.g., PDFs)."
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+   "The template translation app seeks to fill the gap left by current translation technologies, creating economies of scale for the translation of template-based documents and reducing its cost."
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "The Template Translation app will revolutionize the way that form documents are translated. Instead of procuring the services of a translator for each document that needs to be processed, you only need to translate a document once."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  "Just create an account, search for a template, fill in your personal data, and print out your document!"
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "I usually have to wait up to 3 days to receive my document translations and the minimum charges from my translation agency are steep. With the Template Translation app, I received my translation immediately, and at a fraction of the cost!"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  "Try the Template Translation app today and see what it can do for you."
