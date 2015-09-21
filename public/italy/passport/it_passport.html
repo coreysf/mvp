@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <form action="XXX" method="POST" enctype="multipart/form-data">
+      <fieldset>
+        <h3>Informazione di passaporto</h3>
+        <div class="formRow">
+          <input type="hidden" name="language" id="language" value="italian" />
+          <input type="hidden" name="formName" id="formName" value="it_passport" />
+          <label for="type">Tipo
+          <input type="text" name="type" id="type"  />
+          </label>
+          <label for="countryCode">Codice paese
+          <input type="text" name="countryCode" id="countryCode"  />
+          </label>
+          <label for="passportNo">Passaporto No.
+          <input type="text" name="passportNo" id="passportNo"  />
+          </label>
+        </div>
+        <br/>
+        <div class="formRow">
+          <label for="surname" id="surname_label">Cognome
+          <input type="text" name="surname" id="surname"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="givenNames" id="givenNames_label">Nome
+          <input type="text" name="givenNames" id="givenNames"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="nationality" id="nationality_label">Cittadinanza
+          <input type="text" name="nationality" id="nationality"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="dateOfBirth" id="dateOfBirth_label">Data di nascita
+          <input type="text" name="dateOfBirth" id="dateOfBirth"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="gender" id="gender_label">Sesso
+          <input type="text" name="gender" id="gender"  />
+          </label>
+          <label for="placeOfBirth" id="placeOfBirth_label">Luogo di nascita
+          <input type="text" name="placeOfBirth" id="placeOfBirth"  />
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="issueDate" id="issueDate_label">Data di rilascio
+          <input type="text" name="issueDate" id="issueDate"  />
+          </label>
+          <label for="authority" id="authority_label">Autorità
+          <input type="text" name="authority" id="authority"  />
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="expirationDate" id="expirationDate_label">Data di scadenza
+          <input type="text" name="expirationDate" id="expirationDate"  />
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="footerInfo1" id="footerInfo1_label">Informazione a piè - prima riga
+          <input type="text" name="footerInfo1" id="footerInfo1"  />
+          </label>
+          <label for="footerInfo2" id="footerInfo2_label">Informazione a piè - seconda riga
+          <input type="text" name="footerInfo2" id="footerInfo2"  />
+          </label>
+        </div>
+      </fieldset>
+      <input type=submit name="send" value="Richiedere" />
+      <input type=reset value="Azzerare" />
+    </form>
+  </div>
+</body>
+</html>

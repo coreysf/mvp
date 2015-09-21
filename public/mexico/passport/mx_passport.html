@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <form action="XXX" method="POST" enctype="multipart/form-data">
+      <fieldset>
+        <h3>Información de pasaporte</h3>
+        <div class="formRow">
+          <input type="hidden" name="language" id="language" value="spanish" />
+          <input type="hidden" name="formName" id="formName" value="mx_passport" />
+          <label for="type">Tipo
+          <input type="text" name="type" id="type"  />
+          </label>
+          <label for="issuingCountry">Clave del país de expedición
+          <input type="text" name="issuingCountry" id="issuingCountry"  />
+          </label>
+          <label for="passportNo">Pasaporte No.
+          <input type="text" name="passportNo" id="passportNo"  />
+          </label>
+        </div>
+        <br/>
+        <div class="formRow">
+          <label for="surnames" id="surnames_label">Apellidos
+          <input type="text" name="surnames" id="surnames"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="givenNames" id="givenNames_label">Nombres
+          <input type="text" name="givenNames" id="givenNames"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="nationality" id="nationality_label">Nacionalidad
+          <input type="text" name="nationality" id="nationality"  />
+          </label>
+          <label for="curp" id="curp_label">CURP
+          <input type="text" name="curp" id="curp"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="gender" id="gender_label">Sexo
+          <input type="text" name="gender" id="gender"  />
+          </label>
+          <label for="placeOfBirth" id="placeOfBirth_label">Lugar de nacimiento
+          <input type="text" name="placeOfBirth" id="placeOfBirth"  />
+          </label>
+        </div>
+        <br />
+        <div class="formRow">
+          <label for="issueDate" id="issueDate_label">Fecha expedición
+          <input type="text" name="issueDate" id="issueDate"  />
+          </label>
+          <label for="expirationDate" id="expirationDate_label">Fecha caducidad
+          <input type="text" name="expirationDate" id="expirationDate"  />
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="authority" id="authority_label">Autoridad
+          <input type="text" name="authority" id="authority"  />
+          </label>
+          <label for="remarks" id="remarks_label">Observaciones
+          <input type="text" name="remarks" id="remarks"  />
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="footerInfo1" id="footerInfo1_label">Información al pie - primera línea
+          <input type="text" name="footerInfo1" id="footerInfo1"  />
+          </label>
+          <label for="footerInfo2" id="footerInfo2_label">Información al pie - segunda línea
+          <input type="text" name="footerInfo2" id="footerInfo2"  />
+          </label>
+        </div>
+      </fieldset>
+      <input type=submit name="send" value="Solicitar" />
+      <input type=reset value="Reinicializar" />
+    </form>
+  </div>
+</body>
+</html>
