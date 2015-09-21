@@ -1,6 +1,6 @@
-CREATE DATABASE italy;
+CREATE DATABASE translations;
 
-USE italy;
+USE translations;
 
 CREATE TABLE it_passport (
   id INT NOT NULL AUTO_INCREMENT,
@@ -23,11 +23,6 @@ CREATE TABLE it_passport (
   PRIMARY KEY (id)
 );
 
-
-CREATE DATABASE mexico;
-
-USE mexico;
-
 CREATE TABLE mx_passport (
   id INT NOT NULL AUTO_INCREMENT,
   type VARCHAR(3),
@@ -48,6 +43,13 @@ CREATE TABLE mx_passport (
   footer2 VARCHAR(255),
   FOREIGN KEY (userID) REFERENCES users(id),
   timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT,
+  username - VARCHAR(40),
+  password - VARCHAR(255),
   PRIMARY KEY (id)
 );
 
