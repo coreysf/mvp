@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- <html lang="en" ng-app="templates.mxPassport"> -->
+ <html lang="en" ng-app="templates">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../../styles/styles.css" />
+</head>
+<!-- <body ng-controller="MxPassportController"> -->
+<body>
+  <div>
+    <h3>PASSPORT      United Mexican States</h3>
+    <table>
+      <tr>
+        <td><span class="fieldName">Type:</span> {{ type }}</td>
+        <td><span class="fieldName">Issuing Country Code:</span> {{ countryCode }}</td>
+        <td><span class="fieldName">Passport No.:</span> {{ passportNo }}</td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Surnames:</span> {{ surnames }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Given Names:</span> {{ givenNames }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Nationality:</span> {{ nationality }}</td>
+        <td><span class="fieldName">Unique Population Registration Code (CURP):</span> {{ curp }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Date of Birth:</span> {{ dob }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Gender:</span> {{ gender }}</td>
+        <td><span class="fieldName">Place of Birth:</span> {{ placeOfBirth }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Issue Date:</span> {{ issueDate }}</td>
+        <td><span class="fieldName">Expiration Date:</span> {{ expirationDate }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Authority:</span> {{ authority }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Holder's signature</span> [signature]</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>{{ footer1 }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>{{ footer2 }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <!-- <div ng-view></div> -->
+
+  <script src="../../lib/angular/angular.js"></script>
+  <script src="../../lib/angular-route/angular-route.js"></script>
+  <script src="./mxPassport.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>

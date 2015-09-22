@@ -41,7 +41,7 @@ module.exports = {
 
           queryString += "INSERT INTO it_passport (type, country_code, passport_no, surnames, \
                           given_names, nationality, dob, gender, place_of_birth, date_of_issue, \
-                          authority, date_of_expiration, footer1, footer2) VALUES ( \
+                          authority, date_of_expiration, footer1, footer2, userId) VALUES ( \
                           ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SELECT u.id FROM users u WHERE u.username = ?)";
           queryArgs.push(X, X, X, X, X, X, X, X, X, X, X, X, X, X, X);
 
@@ -97,7 +97,7 @@ module.exports = {
 
           queryString += "INSERT INTO mx_passport (type, issuing_country_code, passport_no, surnames, \
                           given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, \
-                          date_of_expiration, authority, remarks, footer1, footer2) VALUES ( \
+                          date_of_expiration, authority, remarks, footer1, footer2, userId) VALUES ( \
                           ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SELECT u.id FROM users u WHERE u.username = ?)";
           queryArgs.push(X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X);
 
