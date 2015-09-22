@@ -1,17 +1,30 @@
 var models = require('../models');
 
 module.exports = {
-  messages: {
+  italy: {
     get: function (req, res) {
-      models.messages.get(function(messages) {
-        res.status(200).send({results: messages});
+      models.italy.get(function(document) {
+        res.status(200).send({results: document});
       });
-    }, // a function which handles a get request for all messages
+    }, // a function which handles a get request for all documents
     post: function (req, res) {
-      models.messages.post(req.body, function(){
-        res.status(201).send('Message posted!');
+      models.italy.post(req.body, function(){
+        res.status(201).send('Document processed!');
       });
-    } // a function which handles posting a message to the database
+    } // a function which handles posting document data to the database
+  },
+
+  mexico: {
+    get: function (req, res) {
+      models.mexico.get(function(document) {
+        res.status(200).send({results: document});
+      });
+    }, // a function which handles a get request for all documents
+    post: function (req, res) {
+      models.mexico.post(req.body, function(){
+        res.status(201).send('Document processed!');
+      });
+    } // a function which handles posting document data to the database
   },
 
   users: {
@@ -23,21 +36,7 @@ module.exports = {
     },
     post: function (req, res) {
       models.users.post(req.body, function(){
-        res.status(201).send('User created!');
-      });
-    }
-  },
-
-  rooms: {
-    // Ditto as above
-    get: function (req, res) {
-      models.rooms.get(function(rooms) {
-        res.status(200).send(rooms);
-      });
-    },
-    post: function (req, res) {
-      models.rooms.post(req.body, function(){
-        res.status(201).send('Room created!');
+        res.status(201).send('user created!');
       });
     }
   }

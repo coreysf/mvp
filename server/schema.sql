@@ -18,7 +18,7 @@ CREATE TABLE it_passport (
   date_of_expiration VARCHAR(30),
   footer1 VARCHAR(255),
   footer2 VARCHAR(255),
-  FOREIGN KEY (userID) REFERENCES users(id),
+  userId INT NOT NULL,
   timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
@@ -41,17 +41,20 @@ CREATE TABLE mx_passport (
   remarks VARCHAR(255),
   footer1 VARCHAR(255),
   footer2 VARCHAR(255),
-  FOREIGN KEY (userID) REFERENCES users(id),
+  userId INT NOT NULL,
   timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
-  username - VARCHAR(40),
-  password - VARCHAR(255),
+  username VARCHAR(40),
+  password VARCHAR(255),
   PRIMARY KEY (id)
 );
+
+ALTER TABLE it_passport ADD FOREIGN KEY (userId) REFERENCES users(id);
+ALTER TABLE mx_passport ADD FOREIGN KEY (userId) REFERENCES users(id);
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root < server/schema.sql
