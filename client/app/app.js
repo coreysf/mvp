@@ -1,6 +1,6 @@
 angular.module('templates', [
   'templates.mxPassport',
-  'templates.services'
+  'templates.services',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
@@ -21,6 +21,11 @@ angular.module('templates', [
     .when('/mx_passport', {
       templateUrl: 'app/mxPassport/mx_passport_template.html',
       controller: 'MxPassportController',
+      css: '../styles/style.css'
+    })
+    .when( '/mx_passport_form', {
+      templateUrl: 'forms/mexico/passport/mx_passport_form.html',
+      controller: 'MxPassportFormController',
       css: '../styles/style.css'
     });
 

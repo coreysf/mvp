@@ -5,7 +5,7 @@ angular.module('templates.services', [])
   var getTemplate = function () {
     return $http({
       method: 'GET',
-      url: '/api/templates'
+      url: '/classes/mexico'
     });
   };
 
@@ -13,7 +13,7 @@ angular.module('templates.services', [])
     console.log("template: " + template);
     return $http({
       method: 'POST',
-      url: '/api/templates',
+      url: '/classes/mexico',
       data: template
     });
   };

@@ -90,17 +90,16 @@
           </label>
         </div>
       </fieldset>
-      <input type=submit name="send" ng-submit="getLinks()" value="Solicita" />
+      <input type=submit name="send" value="Solicita" ng-click="addTemplate()" />
       <input type=reset value="Reinicializa" />
     </form>
   </div>
-  <div ng-view></div>
 
   <script src="../../../lib/angular/angular.js"></script>
   <script src="../../../lib/angular-route/angular-route.js"></script>
+  <script src="../../../app/services/services.js"></script>
   <script src="../../../app/mxPassport/mxPassport.js"></script>
   <script src="../../../app/app.js"></script>
-  <script src="../../../app/services/services.js"></script>
-  <script src="../../../../server/servedata.js"></script>
+  <!-- <script src="../../../../server/servedata.js"></script>  -->
 </body>
 </html>

@@ -16,9 +16,11 @@ angular.module('templates.mxPassport', [])
   $scope.authority = "Foreign Minister";
   $scope.footer1 = "dsfsadfjlo4sdfi45dsf";
   $scope.footer2 = "sdf43589dshlifa";
-
-  $scope.getLinks = function () {
-    Template.getTemplate()
+})
+.controller('MxPassportFormController', function($scope, Template) {
+  $scope.addTemplate = function () {
+    console.log("Got here!!");
+    Template.addTemplate()
     .then(function (template) {
       console.log("template.data", JSON.stringify(template.data));
       // $scope.data.links = template.data;
