@@ -1,5 +1,6 @@
 angular.module('templates', [
   'templates.mxPassport',
+  'templates.services'
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {

@@ -42,8 +42,11 @@ module.exports = {
           queryString += "INSERT INTO it_passport (type, country_code, passport_no, surnames, \
                           given_names, nationality, dob, gender, place_of_birth, date_of_issue, \
                           authority, date_of_expiration, footer1, footer2, userId) VALUES ( \
-                          ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SELECT u.id FROM users u WHERE u.username = ?)";
-          queryArgs.push(X, X, X, X, X, X, X, X, X, X, X, X, X, X, X);
+                          ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+          queryArgs.push(data.type, data.country_code, data.passport_no, data.surnames, 
+            data.given_names, data.nationality, data.dob, data.gender, data.place_of_birth, 
+            data.date_of_issue, data.authority, data.date_of_expiration, data.footer1, data.footer2, 
+            data.userId);
 
           db.query(queryString, queryArgs, function(err, results) {
             if(err) {
@@ -98,8 +101,11 @@ module.exports = {
           queryString += "INSERT INTO mx_passport (type, issuing_country_code, passport_no, surnames, \
                           given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, \
                           date_of_expiration, authority, remarks, footer1, footer2, userId) VALUES ( \
-                          ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SELECT u.id FROM users u WHERE u.username = ?)";
-          queryArgs.push(X, X, X, X, X, X, X, X, X, X, X, X, X, X, X, X);
+                          ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+          queryArgs.push(data.type, data.issuing_country_code, data.passport_no, data.surnames, 
+            data.given_names, data.nationality, data.curp, data.dob, data.gender, data.place_of_birth, 
+            data.date_of_issue, data.date_of_expiration, data.authority, data.remarks, data.footer1, 
+            data.footer2, data.userId);
 
           db.query(queryString, queryArgs, function(err, results) {
             if(err) {

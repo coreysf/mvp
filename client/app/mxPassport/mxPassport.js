@@ -1,6 +1,6 @@
 angular.module('templates.mxPassport', [])
 
-.controller('MxPassportController', function ($scope) {
+.controller('MxPassportController', function ($scope, Template) {
   $scope.type = "T";
   $scope.countryCode = "IT";
   $scope.passportNo = 12345678;
@@ -17,24 +17,14 @@ angular.module('templates.mxPassport', [])
   $scope.footer1 = "dsfsadfjlo4sdfi45dsf";
   $scope.footer2 = "sdf43589dshlifa";
 
-  // $scope.getLinks = function () {
-  //   Links.getLinks()
-  //   .then(function (promise) {
-  //     console.log("promise.data", JSON.stringify(promise.data));
-  //     $scope.data.links = promise.data;
-  //   })
-  //   .catch(function (err) {
-  //     console.log(err);
-  //   });
-
-  //   // .then(function (token) {
-  //   //   $window.localStorage.setItem('com.shortly', token);
-  //   //   $location.path('/links');
-  //   // })
-  //   // .catch(function (error) {
-  //   //   console.error(error);
-  //   // });
-  // };
-  // $scope.getLinks();
-
+  $scope.getLinks = function () {
+    Template.getTemplate()
+    .then(function (template) {
+      console.log("template.data", JSON.stringify(template.data));
+      // $scope.data.links = template.data;
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+  };
 });
