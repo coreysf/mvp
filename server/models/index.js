@@ -82,14 +82,25 @@ module.exports = {
     }, 
     // a function which can be used to insert document data into the database
     post: function (data, callback) {
-      var queryString = "INSERT INTO mx_passport (type, issuing_country_code, passport_no, surnames, \
-                          given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, \
-                          date_of_expiration, authority, remarks, footer1, footer2, userId) VALUES ( \
-                          ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+      // var queryString = "INSERT INTO mx_passport (type, country_code, passport_no, surnames, \
+      //                     given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, \
+      //                     date_of_expiration, authority, remarks, footer1, footer2) VALUES ( \
+      //                     ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+      var queryString = "INSERT INTO mx_passport (type, country_code, passport_no, surnames, \
+        given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, \
+        date_of_expiration, authority, remarks, footer1, footer2) VALUES ( ?, ?, ?, ?, ?, \
+        ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+      // THIS WORKS IN TERMINAL: var queryString = "INSERT INTO mx_passport (type, country_code, passport_no, surnames, given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, date_of_expiration, authority, remarks, footer1, footer2) VALUES ( 'T', 'it', 34234, 'Roy', 'Corey', 'American', '3rsf', 'May1', 'm', 'New Orleans', 'May1', 'May1', 'dsdf', 'remarks', 'sdfs', 'sdfds');";
+
+      // var queryString = "INSERT INTO mx_passport (type, issuing_country_code, passport_no, surnames, given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, date_of_expiration, authority, remarks, footer1, footer2, userId) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
       var queryArgs = [data.documenttype, data.countryCode, data.passportNo, data.surnames, 
       data.givenNames, data.nationality, data.curp, data.dob, data.gender, data.placeOfBirth, 
       data.issueDate, data.expirationDate, data.authority, data.remarks, data.footer1, data.footer2];
       
+
       console.log("queryArgs: " + queryArgs);
 
       db.query(queryString, queryArgs, function(err, results){
