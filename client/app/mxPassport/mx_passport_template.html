@@ -2,42 +2,42 @@
     <h3>PASSPORT      United Mexican States</h3>
     <table>
       <tr>
-        <td><span class="fieldName">Type:</span> {{ doctype }}</td>
-        <td><span class="fieldName">Issuing Country Code:</span> {{ countryCode }}</td>
-        <td><span class="fieldName">Passport No.:</span> {{ passportNo }}</td>
+        <td><span class="fieldName">Type:</span> {{ doc.documenttype }}</td>
+        <td><span class="fieldName">Issuing Country Code:</span> {{ doc.countryCode }}</td>
+        <td><span class="fieldName">Passport No.:</span> {{ doc.passportNo }}</td>
       </tr>
       <tr>
-        <td><span class="fieldName">Surnames:</span> {{ surnames }}</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="fieldName">Given Names:</span> {{ givenNames }}</td>
+        <td><span class="fieldName">Surnames:</span> {{ doc.surnames }}</td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="fieldName">Nationality:</span> {{ nationality }}</td>
-        <td><span class="fieldName">Unique Population Registration Code (CURP):</span> {{ curp }}</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="fieldName">Date of Birth:</span> {{ dob }}</td>
+        <td><span class="fieldName">Given Names:</span> {{ doc.givenNames }}</td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="fieldName">Gender:</span> {{ gender }}</td>
-        <td><span class="fieldName">Place of Birth:</span> {{ placeOfBirth }}</td>
+        <td><span class="fieldName">Nationality:</span> {{ doc.nationality }}</td>
+        <td><span class="fieldName">Unique Population Registration Code (CURP):</span> {{ doc.curp }}</td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="fieldName">Issue Date:</span> {{ issueDate }}</td>
-        <td><span class="fieldName">Expiration Date:</span> {{ expirationDate }}</td>
+        <td><span class="fieldName">Date of Birth:</span> {{ doc.dob }}</td>
+        <td></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="fieldName">Authority:</span> {{ authority }}</td>
+        <td><span class="fieldName">Gender:</span> {{ doc.gender }}</td>
+        <td><span class="fieldName">Place of Birth:</span> {{ doc.placeOfBirth }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Issue Date:</span> {{ doc.issueDate }}</td>
+        <td><span class="fieldName">Expiration Date:</span> {{ doc.expirationDate }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="fieldName">Authority:</span> {{ doc.authority }}</td>
         <td></td>
         <td></td>
       </tr>
@@ -47,12 +47,12 @@
         <td></td>
       </tr>
       <tr>
-        <td>{{ footer1 }}</td>
+        <td>{{ doc.footer1 }}</td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td>{{ footer2 }}</td>
+        <td>{{ doc.footer2 }}</td>
         <td></td>
         <td></td>
       </tr>

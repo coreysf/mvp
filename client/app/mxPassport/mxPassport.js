@@ -1,7 +1,9 @@
 angular.module('templates.mxPassport', [])
 
 .controller('MxPassportController', function ($scope, Template) {
-  $scope.doc.doctype = "T";
+  $scope.doc = {};
+
+  $scope.doc.documenttype = "T";
   $scope.doc.countryCode = "IT";
   $scope.doc.passportNo = 12345678;
   $scope.doc.surnames = "Doe";
