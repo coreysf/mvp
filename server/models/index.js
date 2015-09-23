@@ -82,42 +82,24 @@ module.exports = {
     }, 
     // a function which can be used to insert document data into the database
     post: function (data, callback) {
-      var queryString = "SELECT id AS userId FROM users WHERE username = ?;";
-      var queryArgs = [data.username];
-      db.query(queryString, queryArgs, function(err, results){
-        if(err){
-          console.log(err);
-        } else {
-          var userId = results[0][0] ? results[0][0].userId : undefined;   // DOUBLE CHECK!!
-
-          var queryString = "";
-          var queryArgs = [];
-
-          if (userId === undefined) {
-            queryString += "INSERT INTO users (username) VALUES (?);";
-            queryArgs.push(data.username);                              // DOUBLE CHECK!!
-          }
-
-          queryString += "INSERT INTO mx_passport (type, issuing_country_code, passport_no, surnames, \
+      var queryString = "INSERT INTO mx_passport (type, issuing_country_code, passport_no, surnames, \
                           given_names, nationality, curp, dob, gender, place_of_birth, date_of_issue, \
                           date_of_expiration, authority, remarks, footer1, footer2, userId) VALUES ( \
                           ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-          queryArgs.push(data.type, data.issuing_country_code, data.passport_no, data.surnames, 
-            data.given_names, data.nationality, data.curp, data.dob, data.gender, data.place_of_birth, 
-            data.date_of_issue, data.date_of_expiration, data.authority, data.remarks, data.footer1, 
-            data.footer2, data.userId);
+      var queryArgs = [data.documenttype, data.countryCode, data.passportNo, data.surnames, 
+      data.givenNames, data.nationality, data.curp, data.dob, data.gender, data.placeOfBirth, 
+      data.issueDate, data.expirationDate, data.authority, data.remarks, data.footer1, data.footer2];
+      
+      console.log("queryArgs: " + queryArgs);
 
-          db.query(queryString, queryArgs, function(err, results) {
-            if(err) {
-              console.log(err);
-            } else if (callback) {
-              callback();
-            }
-          });
+      db.query(queryString, queryArgs, function(err, results){
+        if(err){
+          console.log("Database post error: " + err);
+        } else if (callback) {
+          callback();
         }
-
       });
-    } 
+    }
   },
 
   users: {
