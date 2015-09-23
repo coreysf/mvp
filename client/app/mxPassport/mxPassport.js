@@ -1,26 +1,44 @@
 angular.module('templates.mxPassport', [])
 
 .controller('MxPassportController', function ($scope, Template) {
-  $scope.type = "T";
-  $scope.countryCode = "IT";
-  $scope.passportNo = 12345678;
-  $scope.surnames = "Doe";
-  $scope.givenNames = "John";
-  $scope.nationality = "Mexican";
-  $scope.curp = "343sdfsgs4eklsd";
-  $scope.dob = "August 3, 1993";
-  $scope.gender = "M";
-  $scope.placeOfBirth = "Santa Barbara";
-  $scope.issueDate = "February 14, 2012";
-  $scope.expirationDate = "February 14, 2022";
-  $scope.authority = "Foreign Minister";
-  $scope.footer1 = "dsfsadfjlo4sdfi45dsf";
-  $scope.footer2 = "sdf43589dshlifa";
+  $scope.doc.doctype = "T";
+  $scope.doc.countryCode = "IT";
+  $scope.doc.passportNo = 12345678;
+  $scope.doc.surnames = "Doe";
+  $scope.doc.givenNames = "John";
+  $scope.doc.nationality = "Mexican";
+  $scope.doc.curp = "343sdfsgs4eklsd";
+  $scope.doc.dob = "August 3, 1993";
+  $scope.doc.gender = "M";
+  $scope.doc.placeOfBirth = "Santa Barbara";
+  $scope.doc.issueDate = "February 14, 2012";
+  $scope.doc.expirationDate = "February 14, 2022";
+  $scope.doc.authority = "Foreign Minister";
+  $scope.doc.footer1 = "dsfsadfjlo4sdfi45dsf";
+  $scope.doc.footer2 = "sdf43589dshlifa";
 })
 .controller('MxPassportFormController', function($scope, Template) {
-  $scope.addTemplate = function () {
-    console.log("Got here!!");
-    Template.addTemplate()
+  $scope.doc = {};
+
+  $scope.addTemplate = function (mxPassport) {
+
+    $scope.doc.doctype;
+    $scope.doc.countryCode;
+    $scope.doc.passportNo;
+    $scope.doc.surnames;
+    $scope.doc.givenNames;
+    $scope.doc.nationality;
+    $scope.doc.curp;
+    $scope.doc.dob;
+    $scope.doc.gender;
+    $scope.doc.placeOfBirth;
+    $scope.doc.issueDate;
+    $scope.doc.expirationDate;
+    $scope.doc.authority;
+    $scope.doc.footer1;
+    $scope.doc.footer2;
+
+    Template.addTemplate($scope.doc)
     .then(function (template) {
       console.log("template.data", JSON.stringify(template.data));
       // $scope.data.links = template.data;

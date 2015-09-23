@@ -21,6 +21,7 @@ module.exports = {
       });
     }, // a function which handles a get request for all documents
     post: function (req, res) {
+      console.log("Getting into post function!!!");
       models.mexico.post(req.body, function(){
         res.status(201).send('Document processed!');
       });

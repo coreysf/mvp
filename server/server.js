@@ -12,14 +12,17 @@ var app = express();
 module.exports.app = app;
 
 // Set what we are listening on.
-app.set("port", 3000);
-
-// // CORS
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
+app.set('port', process.env.PORT || 3000);
+// app.post("/classes/mexico", function(req, res) {
+//   console.log(req.body);
 // });
+
+// CORS
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // Logging and parsing
 app.use(morgan('dev'));
