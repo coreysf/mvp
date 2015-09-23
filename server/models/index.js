@@ -64,12 +64,10 @@ module.exports = {
   mexico: {
     // a function which produces a single translation record
     get: function (callback) {
-      var queryString = "SELECT m.type AS type, m.issuing_country_code AS code, m.passport_no AS no, \
-                        m.surnames AS surnames, m.given_names AS names, m.nationality AS nationality, \
-                        m.curp AS curp, m.dob AS dob, m.gender AS gender, m.place_of_birth AS place_of_birth, \
-                        m.date_of_issue AS date_of_issue, m.date_of_expiration AS expiration, \
-                        m.authority AS authority, m.remarks AS remarks, m.footer1 AS footer1, \
-                        m.footer2 AS footer2 FROM mx_passport m JOIN users u ON (m.userID=u.id);";
+      var queryString = "SELECT type, country_code, passport_no, surnames, given_names, \
+                        nationality, curp, dob, gender, place_of_birth, date_of_issue, \
+                        date_of_expiration, authority, remarks, footer1, footer2 FROM mx_passport \
+                        WHERE surnames = 'Buschiazzo';";
       var queryArgs = [];
 
       db.query(queryString, queryArgs, function(err, results){
